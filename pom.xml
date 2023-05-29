@@ -14,7 +14,7 @@
 	<name>gui-video</name>
 	<description>Gui Video Locadora</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
