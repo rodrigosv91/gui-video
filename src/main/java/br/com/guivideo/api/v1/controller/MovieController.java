@@ -2,7 +2,6 @@ package br.com.guivideo.api.v1.controller;
 
 import br.com.guivideo.api.v1.dto.response.MovieResponse;
 import br.com.guivideo.business.service.IMovieService;
-import jakarta.websocket.server.PathParam;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
