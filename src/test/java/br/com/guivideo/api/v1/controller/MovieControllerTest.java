@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static br.com.guivideo.provider.MovieProvider.*;
 
 @WebMvcTest(MovieController.class)
-public class MovieControllerTest {
+class MovieControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -34,7 +34,7 @@ public class MovieControllerTest {
         when(movieService.registerMovie(TITLE_MOVIE_A)).thenReturn(MOVIE_RESPONSE_A);
 
         mockMvc.perform(post(URL)
-                        .queryParam("title", "TITLE_MOVIE_A")
+                        .queryParam("title", "213")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
