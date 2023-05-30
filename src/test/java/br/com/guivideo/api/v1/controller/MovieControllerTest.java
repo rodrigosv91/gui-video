@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
-import static br.com.guivideo.api.v1.provider.MovieProvider.*;
+import static br.com.guivideo.provider.MovieProvider.*;
 
 @WebMvcTest(MovieController.class)
 public class MovieControllerTest {
@@ -34,7 +34,7 @@ public class MovieControllerTest {
         when(movieService.registerMovie(TITLE_MOVIE_A)).thenReturn(MOVIE_RESPONSE_A);
 
         mockMvc.perform(post(URL)
-                        .queryParam("title", TITLE_MOVIE_A)
+                        .queryParam("title", "TITLE_MOVIE_A")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))

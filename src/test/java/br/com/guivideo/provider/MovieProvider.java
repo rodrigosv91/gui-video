@@ -1,4 +1,4 @@
-package br.com.guivideo.api.v1.provider;
+package br.com.guivideo.provider;
 
 import br.com.guivideo.api.v1.dto.response.MovieResponse;
 import br.com.guivideo.business.entity.Movie;

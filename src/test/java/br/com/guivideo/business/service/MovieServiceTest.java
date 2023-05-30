@@ -17,7 +17,7 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import static br.com.guivideo.api.v1.provider.MovieProvider.*;
+import static br.com.guivideo.provider.MovieProvider.*;
 
 @WebMvcTest(MovieService.class)
 public class MovieServiceTest {
