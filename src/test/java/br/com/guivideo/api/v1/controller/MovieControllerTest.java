@@ -34,7 +34,7 @@ class MovieControllerTest {
         when(movieService.registerMovie(TITLE_MOVIE_A)).thenReturn(MOVIE_RESPONSE_A);
 
         mockMvc.perform(post(URL)
-                        .queryParam("title", "213")
+                        .queryParam("title", TITLE_MOVIE_A)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
