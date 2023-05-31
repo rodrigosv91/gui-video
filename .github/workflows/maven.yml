@@ -91,4 +91,4 @@ jobs:
           registry: docker.io
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
