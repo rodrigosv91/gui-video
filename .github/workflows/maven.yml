@@ -75,7 +75,7 @@ jobs:
         with:
           image: rodrigosv231/gui-video1
           tags: latest
-          registry: docker.io
+#          registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
