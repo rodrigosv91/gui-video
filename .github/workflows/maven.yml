@@ -38,6 +38,7 @@ jobs:
         run: mvn test
 
   docker_build_and_push:
+    needs: test_project
     runs-on: ubuntu-latest
 
     steps:
