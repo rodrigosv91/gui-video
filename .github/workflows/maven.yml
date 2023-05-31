@@ -87,7 +87,7 @@ jobs:
           context: .
           push: true
           tags: |
-            rodrigosv231/gui-video1:latest
+            rodrigosv231/gui-video1
           registry: docker.io
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
