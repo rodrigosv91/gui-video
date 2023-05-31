@@ -62,7 +62,6 @@ jobs:
 
     steps:
       - name: Build and Push docker image
-        run: mvn clean install
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
           image: rodrigosv231/gui-video1
