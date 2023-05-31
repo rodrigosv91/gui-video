@@ -73,8 +73,8 @@ jobs:
       - name: Build and Push docker image
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: rodrigosv231/gui-video1:latest
-#          tags: latest
+          image: rodrigosv231/gui-video1
+          tags: latest
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKERHUB_USERNAME }}
