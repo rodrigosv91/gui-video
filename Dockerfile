@@ -1,4 +1,4 @@
-FROM gradle:8.0.2-jdk11
-COPY build/libs/dbrank-0.0.1-SNAPSHOT.jar /app.jar
+FROM openjdk:11
 EXPOSE 8080
+ADD target/gui-video1.jar gui-video1.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
