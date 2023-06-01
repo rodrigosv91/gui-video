@@ -8,37 +8,37 @@ on:
     branches: [ "main" ]
 
 jobs:
-#  build_project:
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#    - uses: actions/checkout@v3
-#    - name: Set up JDK 11
-#      uses: actions/setup-java@v1
-#      with:
-#        java-version: '11'
-#        distribution: 'temurin'
-#        cache: maven
-#    - name: Build with Maven
-#      run: mvn clean install
-#
-#  test_project:
-#    needs: build_project
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - uses: actions/checkout@v3
-#      - name: Set up JDK 11
-#        uses: actions/setup-java@v1
-#        with:
-#          java-version: '11'
-#          distribution: 'temurin'
-#          cache: maven
-#      - name: Run Tests
-#        run: mvn test
+  build_project:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: maven
+    - name: Build with Maven
+      run: mvn clean install
+
+  test_project:
+    needs: build_project
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+      - name: Run Tests
+        run: mvn test
 
   docker_build_and_push:
-#    needs: test_project
+    needs: test_project
     runs-on: ubuntu-latest
 
     steps:
@@ -62,7 +62,7 @@ jobs:
 
     steps:
 #      - uses: actions/checkout@v3
-      - name: Access URL
+      - name: Atualiza deploy com Render Deploy Hook
         run: curl ${{ secrets.RENDER_HOOK_GUI_VIDEO1 }}
 
 
